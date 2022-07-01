@@ -57,10 +57,10 @@ class EnterpriseModelSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class CustomModelSerializer(serializers.HyperlinkedModelSerializer):
-    size_of_thumbnail = serializers.SerializerMethodField()
+
     class Meta:
         model = UploadImageTest
-        fields = ('thumbnail', 'image','size_of_thumbnail')
+        fields = ('thumbnail', 'image')
 
     thumbnail = HyperlinkedSorlImageField(
         '200x200',
